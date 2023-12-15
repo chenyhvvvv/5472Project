@@ -1,0 +1,29 @@
+{
+  "dataset": {
+    "preprocess_pkl_loc": "/import/home2/yhchenmath/Dataset/stitch3D/DLPFC/process/",
+    "align": {
+      "plot": false
+    },
+    "preprocess": {
+      "sample_col": "sample",
+      "coor_key": "loc_use",
+      "c2c_dist": 200,
+      "n_hvg_group": 500
+    }
+  },
+  "model": {
+    "distribution": "Poisson",
+    "coef_fe": 0.1,
+    "arch": {
+      "hidden_dims": [512, 128],
+      "n_heads": 1,
+      "slice_emb_dim": 16
+    }
+  },
+  "training": {
+    "training_steps": 80000,
+    "lr": 0.0001,
+    "log_every": 1000,
+    "save_every": 5000
+  }
+}
